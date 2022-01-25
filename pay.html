@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pay</title>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="signin-button">Log out</a><h1>Owen bucks bank</h1><a class="acount-button">Acount</a>
+       </header>
+       <h2>Pay</h2>
+       <select>
+           <option value="In person">In Person</option>
+           <option value="online" class="online" disabled>Online <em>(coming soon)</em></option>
+       </select><br>
+       <button onclick="getValue()">Pay</button>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,487&family=Island+Moments&family=Lato:wght@300&family=Licorice&family=Lora:wght@400;500&family=Merriweather:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital,wght@1,400;1,500&family=Poppins:wght@100&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&family=Source+Serif+4:ital,wght@1,200&family=Source+Serif+Pro:ital@1&family=Vujahday+Script&display=swap');
+.online:hover {
+    cursor: not-allowed;
+}
+    *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    padding: 0.5em 0.5em 0.5em;
+    background-color: rgb(255, 102, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+</style>
+<script>
+    function getValue() {
+   window.alert("Go To Owen!!");
+    }
+</script>
+</html>

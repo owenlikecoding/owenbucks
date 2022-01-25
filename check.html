@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Acount</title>
+</head>
+<body>
+    <h2>to check acount first sign in</h2>
+    <input type="text" class="username" id="username" placeholder="Username"><br>
+    <input type="password" class="password" id="password" placeholder="Password"><br><br>
+    <button class="sign-in-btn"  id="sid" onclick="check()">Check</button>
+</body>
+<script>
+ function check(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (password == "123456"&& username == "admin") {
+          window.alert(' hello owen!');
+          window.alert('your ballance: 100,000 Owen Bucks')
+      }
+      if (password == "000000"&& username == "macen") {
+          window.alert('hello'+ ' '+username);
+          window.alert('your ballance: 200 owen bucks')
+      }
+    if (password == "12345"&& username == "parkerpinson"){
+      
+    }
+    if ( password == "ryry123" && username == "ryry321") {
+        window.alert('hello'+ ' '+username);
+          window.alert('your ballance: 0 owen bucks');
+    }
+    if (password == "carrots" && username == "pufferfish"){
+        window.alert('Welcome'+ ' '+username);
+        window.alert('your ballance: 0 owen bucks');
+    }
+      else {
+          window.alert('Please enter correct password/username');
+      }
+
+    }
+</script>
+</html>

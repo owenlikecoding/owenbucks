@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acount</title>
+</head>
+<body>
+    <header>
+        <a href="home.html">Log Out</a><a href="home.html"><h1>Owen bucks bank</h1></a><a href="acount.html" class="acount-button">Acount</a>
+        </header>
+   <div id="ballane" class="ballance">
+       <p value="100" id="b" >100</p>
+       <h2>Transaction</h2>
+       <input type="text" id="amount" name="transaction" placeholder="amount"/><br>
+       <input type="text" id="name" name="name" placeholder="name"/><br>
+       <button type="button" id="transactionForward" onclick="makeTransaction()">Make transaction</button>
+
+      <h2>Transaction history</h2>
+      <ul id="users">
+        
+      </ul>
+      <button id="pay" onclick="pay()">Pay Fees</button>
+      <button onclick="window.location.href='check.html'">check ballance</button>
+      </div>
+</body>
+<script>
+    function makeTransaction() {
+    var amount = document.getElementById("amount").value;
+    var name = document.getElementById("name").value;
+    var transactionForward = document.getElementById("transactionForward").value;
+    var entry = document.createElement('li');
+    var list = document.getElementById('users');
+        entry.appendChild(document.createTextNode('amount:'+ amount + ' to: ' + name));
+        list.appendChild(entry);
+    if (amount <"1") {
+        window.alert("Transaction unsuccessful👹 ")
+        window.alert("by da way u BROKE")
+    }
+    else {
+        window.alert("transaction Successful!")
+        window.alert(amount+' added to fees')
+    }
+
+    }
+ function pay() {
+     window.open("pay.html");
+ }
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,487&family=Island+Moments&family=Lato:wght@300&family=Licorice&family=Lora:wght@400;500&family=Merriweather:ital,wght@1,300&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital,wght@1,400;1,500&family=Poppins:wght@100&family=Roboto:ital,wght@1,100&family=Source+Sans+Pro:wght@600&family=Source+Serif+4:ital,wght@1,200&family=Source+Serif+Pro:ital@1&family=Vujahday+Script&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+h2 {
+    text-decoration: underline;
+}
+button {
+    padding: 0.5em 0.5em 0.5em;
+    background-color: rgb(255, 102, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+p{
+    display: none;
+}
+</style>
+</html>
